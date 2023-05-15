@@ -1,3 +1,11 @@
+Steps to run:
+1. Install nodejs, npm & angular-cli.
+2. Do `git clone <repository-url>` and go to the project folder.
+3. Run `npm install` to install the necessary packages.
+4. To run local development server, run `ng serve`.
+5. Go to `localhost:4200` or whichever port the app development server is running on.
+
+
 # TodoApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
