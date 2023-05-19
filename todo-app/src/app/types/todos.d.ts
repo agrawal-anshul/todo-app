@@ -1,4 +1,4 @@
-interface task{
+interface Task{
    id:number
    task:string
 }

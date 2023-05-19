@@ -6,15 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./todos.component.css']
 })
 export class TodosComponent {
-  title:string = "Basic To-Do App"
-  todos: task[] = []
+  title:string = "To-Do List App with Angular"
+  todos: Task[] = []
 
   addTask(task:string){
     this.todos.push({'id':this.todos.length,'task':task})
     console.log(this.todos)
   }
-  removeTask(_task:task){
-    console.warn(_task.id)
-    this.todos = this.todos.filter(item => item.id !== _task.id)
+  removeTask(task:Task){
+    console.warn(task.id)
+    this.todos = this.todos.filter(item => item.id !== task.id)
   }
 }
