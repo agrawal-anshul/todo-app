@@ -1,0 +1,15 @@
+<!-- <li>{{todo?.id}} - {{todo?.task}}<button title="removeTodo" (click)="onClick(todo)">Remove</button></li> -->
+
+<div class="clr-row">
+   <div class="clr-col-lg-5 clr-col-md-8 clr-col-12">
+       <div class="card">
+           <h3 class="card-header">Task {{Number(todo?.id) + 1}}</h3>
+           <div class="card-block">
+               <h4 class="card-text">{{todo?.task}}</h4>
+           </div>
+           <div class="card-footer">
+               <button class="btn btn-sm btn-danger" (click)="onClick(todo)"><cds-icon shape="trash"></cds-icon> Remove me!</button>
+           </div>
+       </div>
+   </div>
+</div>

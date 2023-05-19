@@ -1,9 +1,26 @@
-<p>{{title}}</p>
-<input type="text" placeholder="Enter a new task" #task>
-<button (click)="addTask(task.value)">Add new task </button>
-<ul *ngFor="let todo of todos; let i = index;">
+<h1>{{title}}</h1>
+<br>
+<!-- <input type="text" placeholder="Enter a new task" #task> -->
+
+<!-- <ul *ngFor="let todo of todos; let i = index;">
    <li>
       {{todo.task}}
       <button title="removeTodo" (click)="removeTask(todo)">Remove</button>
    </li>
-</ul>
+</ul> -->
+
+<div class="clr-row">
+   <div class="clr-col-3">
+      <form class="clr-form">
+         <label class="clr-required-mark" for="todo-task">Enter a task: </label>
+         <input class="clr-input" [ngStyle]="{'padding-left':'10px'}" type="text" id="todo-task" placeholder="Fill me!"  #task/>
+      </form>
+   </div>
+   <div class="clr-col-3">
+      <button class="btn btn-primary" type="" (click)="addTask(task.value)">Add new task </button>
+   </div>
+</div>
+
+<ng-container *ngFor="let todo of todos; let i = index;">
+   <app-todos-item [todo]="todo" (todoDelete)="removeTask($event)"></app-todos-item>
+</ng-container>
